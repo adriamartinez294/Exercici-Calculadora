@@ -50,68 +50,90 @@ public class VistaCalculadora {
 
     @FXML
     private void add0(ActionEvent event) {
-        text = text + "0";
-        calctext.setText(String.valueOf(text));
+        if (text.length() < 17){
+            text = text + "0";
+            calctext.setText(String.valueOf(text));
+        }
     }
 
     @FXML
     private void add1(ActionEvent event) {
-        text = text + "1";
-        calctext.setText(String.valueOf(text));
+        if (text.length() < 17){
+            text = text + "1";
+            calctext.setText(String.valueOf(text));
+        }
     }
 
     @FXML
     private void add2(ActionEvent event) {
-        text = text + "2";
-        calctext.setText(String.valueOf(text));
+        if (text.length() < 17){
+            text = text + "2";
+            calctext.setText(String.valueOf(text));
+        }
     }
 
     @FXML
     private void add3(ActionEvent event) {
-        text = text + "3";
-        calctext.setText(String.valueOf(text));
+        if (text.length() < 17){
+            text = text + "3";
+            calctext.setText(String.valueOf(text));
+        }
     }
 
     @FXML
     private void add4(ActionEvent event) {
-        text = text + "4";
-        calctext.setText(String.valueOf(text));
+        if (text.length() < 17){
+            text = text + "4";
+            calctext.setText(String.valueOf(text));
+        }
     }
 
     @FXML
     private void add5(ActionEvent event) {
-        text = text + "5";
-        calctext.setText(String.valueOf(text));
+        if (text.length() < 17){
+            text = text + "5";
+            calctext.setText(String.valueOf(text));
+        }
     }
 
     @FXML
     private void add6(ActionEvent event) {
-        text = text + "6";
-        calctext.setText(String.valueOf(text));
+        if (text.length() < 17){
+            text = text + "6";
+            calctext.setText(String.valueOf(text));
+        }
     }
 
     @FXML
     private void add7(ActionEvent event) {
-        text = text + "7";
-        calctext.setText(String.valueOf(text));
+        if (text.length() < 17){
+            text = text + "7";
+            calctext.setText(String.valueOf(text));
+        }
     }
 
     @FXML
     private void add8(ActionEvent event) {
-        text = text + "8";
-        calctext.setText(String.valueOf(text));
+        if (text.length() < 17){
+            text = text + "8";
+            calctext.setText(String.valueOf(text));
+        }
     }
 
     @FXML
     private void add9(ActionEvent event) {
-        text = text + "9";
-        calctext.setText(String.valueOf(text));
+        if (text.length() < 17){
+            text = text + "9";
+            calctext.setText(String.valueOf(text));
+        }
     }
 
     @FXML
     private void addperiod(ActionEvent event) {
-        text = text + ".";
-        calctext.setText(String.valueOf(text));
+        if (text.length() < 17){
+            text = text + ".";
+            calctext.setText(String.valueOf(text));
+        }
     }
 
     @FXML
