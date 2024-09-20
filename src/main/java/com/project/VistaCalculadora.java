@@ -47,7 +47,7 @@ public class VistaCalculadora {
 
     private String text = "";
     private float result = 0;
-
+    private String calc = "";
     @FXML
     private void add0(ActionEvent event) {
         if (text.length() < 17){
@@ -138,13 +138,73 @@ public class VistaCalculadora {
 
     @FXML
     private void reset(ActionEvent event) {
-        text = "0";
-        calctext.setText(String.valueOf(text));
+        clearscreen();
         text = "";
+        result = 0;
+        calc = "";
+    }
+
+    @FXML
+    private void sum(ActionEvent event) {
+        if (calc == ""){
+            result = Float.parseFloat(text);
+            calc = "+";
+            clearscreen();
+
+        }
+        else{
+            result = operation(calc, result, Float.parseFloat(text));
+            calc = "+";
+            clearscreen();
+        }
+
+    }
+
+    @FXML
+    private void rest(ActionEvent event) {
+        if (calc == ""){
+            result = Float.parseFloat(text);
+            calc = "-";
+            clearscreen();
+        }
+        else{
+            result = operation(calc, result, Float.parseFloat(text));
+            calc = "-";
+            clearscreen();
+        }
+    }
+
+    @FXML
+    private void multi(ActionEvent event) {
+        if (calc == ""){
+            result = Float.parseFloat(text);
+            calc = "*";
+            clearscreen();
+        }
+        else{
+            result = operation(calc, result, Float.parseFloat(text));
+            calc = "*";
+            clearscreen();
+        }
+    }
+
+    @FXML
+    private void div(ActionEvent event) {
+        if (calc == ""){
+            result = Float.parseFloat(text);
+            calc = "/";
+            clearscreen();
+        }
+        else{
+            result = operation(calc, result, Float.parseFloat(text));
+            calc = "/";
+            clearscreen();
+        }
     }
 
     @FXML
     private void showresult(ActionEvent event) {
+        result = operation(calc, result, Float.parseFloat(text));
         calctext.setText(String.valueOf(result));
     }
 
@@ -165,5 +225,11 @@ public class VistaCalculadora {
             }
             return result;
         }
+
+    private void clearscreen(){
+        text = "0";
+        calctext.setText(String.valueOf(text));
+        text = "";
+    }
 
 }
