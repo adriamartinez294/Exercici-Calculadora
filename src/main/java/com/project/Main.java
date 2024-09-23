@@ -9,7 +9,7 @@ import javafx.stage.Stage;
 
 public class Main extends Application {
 
-    final int WINDOW_WIDTH = 600;
+    final int WINDOW_WIDTH = 542;
     final int WINDOW_HEIGHT = 600;
 
     @Override
